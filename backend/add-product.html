@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <title>Ongeza Bidhaa | Msuo Aqua</title>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 520px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      margin: auto;
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 22px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    input,
+    select,
+    button {
+      width: 100%;
+      height: 46px;
+      padding: 0 14px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    input:focus,
+    select:focus {
+      outline: none;
+      border-color: #0b5ed7;
+      box-shadow: 0 0 0 3px rgba(11,94,215,.15);
+    }
+
+    button {
+      background: #0b5ed7;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #084298;
+    }
+
+    .success {
+      color: #16a34a;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .error {
+      color: #dc2626;
+      text-align: center;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>➕ Ongeza Bidhaa</h2>
+
+    <form id="productForm" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Jina la bidhaa" required>
+      </div>
+
+      <div class="form-group">
+        <select name="category" required>
+          <option value="">-- Chagua Category --</option>
+          <option value="samaki">Samaki</option>
+          <option value="aquarium">Aquarium</option>
+          <option value="kuku">Kuku</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="price" placeholder="Bei (Tsh)" required>
+      </div>
+
+      <div class="form-group">
+        <input type="text" name="unit" placeholder="Unit (pair, piece, pack)" required>
+      </div>
+
+      <div class="form-group">
+        <select name="badge">
+          <option value="">-- Hakuna badge --</option>
+          <option value="mpya">Mpya</option>
+          <option value="maarufu">Maarufu</option>
+          <option value="offer">Offer</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="file" name="image" accept="image/*">
+      </div>
+
+      <button type="submit">Hifadhi Bidhaa</button>
+
+      <div id="response"></div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("productForm");
+    const responseBox = document.getElementById("response");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const res = await fetch("api/add-product.php", {
+          method: "POST",
+          body: formData
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          responseBox.innerHTML = "<p class='success'>Bidhaa imeongezwa kikamilifu ✔</p>";
+          form.reset();
+        } else {
+          responseBox.innerHTML = "<p class='error'>" + data.error + "</p>";
+        }
+
+      } catch (err) {
+        responseBox.innerHTML = "<p class='error'>Server error</p>";
+      }
+    });
+  </script>
+
+</body>
+</html>

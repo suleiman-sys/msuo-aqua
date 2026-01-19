@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <title>Maelezo ya Bidhaa | Msuo Aqua & Poultry Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="products.html" class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <span>Msuo Aqua & Poultry Center</span>
+    </a>
+  </div>
+</nav>
+
+<!-- PRODUCT DETAIL -->
+<section class="product-detail" id="productDetail">
+  <p>Inapakia bidhaa...</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-box">
+      <h3>🐟 Msuo Aqua & Poultry Center</h3>
+      <p>
+        Samaki wa mapambo, aquarium, kuku wa kienyeji, mayai
+        na ushauri wa kitaalamu wa ufugaji.
+      </p>
+    </div>
+
+    <div class="footer-box">
+      <h4>Wasiliana Nasi</h4>
+      <p>📞 0769 514 161</p>
+      <p>📍 Tanzania</p>
+    </div>
+
+    <div class="footer-box">
+      <a href="contact.html" class="btn whatsapp-btn footer-btn">
+        💬 Wasiliana
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Msuo Aqua & Poultry Center
+  </div>
+</footer>
+
+<!-- PRODUCT SCRIPT -->
+<script>
+async function loadProduct() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  if (!id) {
+    document.getElementById("productDetail").innerHTML =
+      "<p>Bidhaa haijapatikana</p>";
+    return;
+  }
+
+  try {
+    // tunaita API (page 1 inatosha kwa single product)
+    const res = await fetch("backend/api/products.php?page=1");
+    if (!res.ok) throw new Error("Fetch failed");
+
+    const data = await res.json();
+
+    // ⚠️ bidhaa sasa zipo ndani ya data.items
+    const product = data.items.find(p => p.id == id);
+
+    if (!product) {
+      document.getElementById("productDetail").innerHTML =
+        "<p>Bidhaa haipo</p>";
+      return;
+    }
+
+    const msg = `Habari, nahitaji ${product.name} (${product.unit}) bei Tsh ${Number(product.price).toLocaleString()}`;
+
+    document.getElementById("productDetail").innerHTML = `
+      <div class="detail-card">
+        <img src="${product.image || 'images/no-image.png'}" alt="${product.name}">
+        <h2>${product.name}</h2>
+        <p><strong>Aina:</strong> ${product.category}</p>
+        <p><strong>Maelezo:</strong> ${product.description}</p>
+        <p><strong>Bei:</strong> Tsh ${Number(product.price).toLocaleString()}</p>
+        <p><strong>Unit:</strong> ${product.unit}</p>
+
+        <a
+          href="https://wa.me/255769514161?text=${encodeURIComponent(msg)}"
+          class="btn whatsapp-btn"
+          target="_blank">
+          💬 Nunua Kupitia WhatsApp
+        </a>
+      </div>
+    `;
+
+  } catch (err) {
+    console.error(err);
+    document.getElementById("productDetail").innerHTML = `
+      <p>❌ Hitilafu ya mtandao, jaribu tena</p>
+    `;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadProduct);
+</script>
+
+
+</body>
+</html>

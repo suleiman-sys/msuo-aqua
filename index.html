@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <title>Msuo Aqua & Poultry Center</title>
+  <meta name="description" content="Msuo Aqua & Poultry Center ni wauzaji wa samaki wa mapambo, aquarium, kuku wa kienyeji, mayai na ushauri wa ufugaji Tanzania.">
+  <meta name="keywords" content="samaki wa mapambo, aquarium, goldfish, koi fish, kuku wa kienyeji, ufugaji Tanzania">
+  <meta name="author" content="Msuo Aqua & Poultry Center">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar-inner">
+  <div class="top-bar-left">
+    <span>📍 Tanzania</span>
+    <span>📞 0769 514 161</span>
+  </div>
+
+  <div class="top-bar-right">
+    <a href="https://wa.me/255769514161" target="_blank">
+      <img src="images/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+    <a href="https://facebook.com" target="_blank">
+      <img src="images/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="images/instagram.png" alt="Instagram">
+    </a>
+  </div>
+</div>
+
+
+
+
+
+<!-- ================= NAVBAR ================= -->
+<nav class="nav">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+   <a href="index.html" class="logo">
+  <img src="images/logo.png" alt="Msuo Aqua & Poultry Center Logo">
+  <span>Msuo Aqua & Poultry Center</span>
+</a>
+
+
+    <!-- LINKS -->
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Bidhaa</a></li>
+      <li><a href="services.html">Huduma</a></li>
+      <li><a href="about.html">Kuhusu Sisi</a></li>
+      <li>
+        <a href="contact.html" class="nav-btn">Wasiliana</a>
+      </li>
+      <li class="nav-search">
+  <input type="text" placeholder="Tafuta..." id="navSearch">
+</li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<!-- ================= HERO SLIDER ================= -->
+<section class="hero-slider">
+  <div class="slide active" style="background-image:url('images/slide-1.jpg')"></div>
+  <div class="slide" style="background-image:url('images/slide-2.jpg')"></div>
+  <div class="slide" style="background-image:url('images/slide-3.jpg')"></div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Msuo Aqua & Poultry Center</h1>
+    <p>
+      Samaki wa mapambo • Aquarium • Kuku • Ushauri wa Ufugaji
+    </p>
+    <a href="products.html" class="btn hero-btn">
+      Angalia Bidhaa
+    </a>
+  </div>
+</section>
+
+<!-- ================= HUDUMA (SUMMARY) ================= -->
+<section class="services">
+  <h2 class="section-title">Huduma Zetu</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <span class="service-icon">🐠</span>
+      <h3>Samaki wa Mapambo</h3>
+      <p>Goldfish, Koi, Guppy na aina nyingine (huuzwa kwa pair)</p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">🧰</span>
+      <h3>Aquarium & Vifaa</h3>
+      <p>Filter, Air Pump, Decorations na vifaa vingine</p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">🐔</span>
+      <h3>Kuku & Mayai</h3>
+      <p>Kuku wa kienyeji, mapambo na mayai bora</p>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">📘</span>
+      <h3>Ushauri wa Ufugaji</h3>
+      <p>Ushauri wa kitaalamu kwa wanaoanza na wanaoendelea</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:30px;">
+    <a href="services.html" class="btn">
+      Soma Zaidi
+    </a>
+  </div>
+</section>
+<section class="products" id="bidhaa">
+  <div class="container">
+
+    <h2 class="section-title">Bidhaa Zetu</h2>
+    <p class="section-subtitle">
+      Samaki wa mapambo, vifaa vya aquarium na kuku bora kwa ufugaji
+    </p>
+
+    <!-- FILTER -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Zote</button>
+      <button class="filter-btn" data-filter="samaki">Samaki</button>
+      <button class="filter-btn" data-filter="aquarium">Aquarium</button>
+      <button class="filter-btn" data-filter="kuku">Kuku</button>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Tafuta bidhaa..." />
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <div class="product-grid" id="productGrid">
+      <!-- JS itaweka cards hapa -->
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= BIDHAA MAARUFU ================= -->
+<section class="products featured">
+  <h2 class="section-title">Bidhaa Maarufu</h2>
+
+  <div class="product-grid">
+
+
+    <div class="product-card">
+      <span class="badge mpya">MPYA</span>
+      <img src="images/goldfish.jpg" alt="Goldfish">
+      <h3>Goldfish (Pair)</h3>
+      <p class="price">Tsh 40,000</p>
+      <a href="https://wa.me/255769514161" class="btn whatsapp-btn">
+        💬 Agiza WhatsApp
+      </a>
+    </div>
+
+    <div class="product-card">
+      <span class="badge maarufu">MAARUFU</span>
+      <img src="images/koi.jpg" alt="Koi Fish">
+      <h3>Koi Fish (Pair)</h3>
+      <p class="price">Tsh 120,000</p>
+      <a href="https://wa.me/255769514161" class="btn whatsapp-btn">
+        💬 Agiza WhatsApp
+      </a>
+    </div>
+
+      <div class="product-card">
+      <span class="badge maarufu">MAARUFU</span>
+      <img src="images/saso 1.jpg" alt="Koi Fish">
+      <h3>Saso (Pair)</h3>
+      <p class="price">Tsh 50,000</p>
+      <a href="https://wa.me/255769514161" class="btn whatsapp-btn">
+        💬 Agiza WhatsApp
+      </a>
+    </div>
+
+    <div class="product-card">
+      <img src="images/silki 2.jpg" alt="Kuku">
+      <h3>Kuku wa Silki</h3>
+      <p class="price">Tsh 18,000</p>
+      <a href="https://wa.me/255769514161" class="btn whatsapp-btn">
+        💬 Agiza WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:30px;">
+    <a href="products.html" class="btn">
+      Angalia Bidhaa Zote
+    </a>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials">
+  <h2 class="section-title">Wateja Wanasema Nini?</h2>
+  <p class="section-subtitle">
+    Maoni ya wateja waliotumia huduma zetu
+  </p>
+
+  <div class="testimonial-grid">
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “Nilinunua Goldfish na Aquarium, huduma ilikuwa nzuri sana.
+        Samaki wako na afya njema.”
+      </p>
+      <h4>— Asha M.</h4>
+      <span>Dar es Salaam</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “Ushauri wa ufugaji wa kuku ulinisaidia sana.
+        Biashara yangu imeanza kukua.”
+      </p>
+      <h4>— Juma K.</h4>
+      <span>Morogoro</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “Huduma ya WhatsApp ni ya haraka,
+        na bidhaa ni bora.”
+      </p>
+      <h4>— Neema S.</h4>
+      <span>Dodoma</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h3>🐟 Msuo Aqua & Poultry Center</h3>
+      <p>
+        Samaki wa mapambo, aquarium, kuku wa kienyeji, mayai
+        na ushauri wa kitaalamu wa ufugaji.
+      </p>
+    </div>
+
+    <div class="footer-box">
+      <h4>Wasiliana Nasi</h4>
+      <p>📞 0769 514 161</p>
+      <p>📍 Tanzania</p>
+    </div>
+
+    <div class="footer-box">
+      <h4>Kurasa</h4>
+      <ul>
+        <li>Bidhaa</li>
+        <li>Huduma</li>
+        <li>Kuhusu Sisi</li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <a href="contact.html" class="btn whatsapp-btn footer-btn">
+        💬 Wasiliana
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Msuo Aqua & Poultry Center
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<!-- FLOATING WHATSAPP BUTTON -->
+<a
+  href="https://wa.me/255769514161"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Wasiliana nasi WhatsApp"
+>
+  <img src="images/whatsapp-icon.png" alt="WhatsApp">
+</a>
+
+<!-- PRODUCT PREVIEW MODAL -->
+<div id="productModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="modal-close" id="closeModal">&times;</span>
+    <img id="modalImage" src="">
+    <h2 id="modalName"></h2>
+    <p id="modalDesc"></p>
+    <p class="price" id="modalPrice"></p>
+    <a id="modalWhatsapp" class="btn whatsapp-btn" target="_blank">💬 Nunua WhatsApp</a>
+  </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <title>Bidhaa Zote | Msuo Aqua & Poultry Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Logo">
+      <span>Msuo Aqua & Poultry Center</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Bidhaa</a></li>
+      <li><a href="services.html">Huduma</a></li>
+      <li><a href="about.html">Kuhusu Sisi</a></li>
+      <li><a href="contact.html">Wasiliana</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="products-header">
+  <h2 class="section-title">Bidhaa Zetu</h2>
+  <p class="section-subtitle">
+    Chagua bidhaa unayotaka kisha uone maelezo kamili
+  </p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">Zote</button>
+  <button class="filter-btn" data-filter="samaki">Samaki</button>
+  <button class="filter-btn" data-filter="aquarium">Aquarium</button>
+  <button class="filter-btn" data-filter="kuku">Kuku</button>
+</div>
+
+<!-- SEARCH -->
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Tafuta bidhaa...">
+</div>
+
+<!-- PRODUCTS GRID (DYNAMIC) -->
+<section class="products">
+  <div class="product-grid" id="productGrid">
+    <!-- JS itaweka bidhaa zote hapa -->
+  </div>
+  <div id="pagination" class="pagination"></div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-bottom">
+    © 2026 Msuo Aqua & Poultry Center
+  </div>
+</footer>
+
+<!-- MAIN JS -->
+<script src="js/main.js"></script>
+<!-- PRODUCT PREVIEW MODAL -->
+<div id="productModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="modal-close" id="closeModal">&times;</span>
+
+    <img id="modalImage" src="" alt="">
+    <h2 id="modalName"></h2>
+    <p id="modalDesc"></p>
+    <p class="price" id="modalPrice"></p>
+
+    <a id="modalWhatsapp" class="btn whatsapp-btn" target="_blank">
+      💬 Nunua WhatsApp
+    </a>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,1244 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f6f7f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===============================
+   NAVBAR (FINAL)
+================================ */
+.nav {
+  background: #0b5ed7;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-btn {
+  background: #25d366;
+  padding: 10px 22px;
+  border-radius: 999px;
+  color: #fff !important;
+}
+
+/* ===============================
+   BUTTONS (GLOBAL)
+================================ */
+.btn {
+  background: #0b5ed7;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #084298;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+/* ===============================
+   HERO SLIDER
+================================ */
+.hero-slider {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  max-width: 700px;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background: #00c896;
+  padding: 14px 34px;
+  border-radius: 999px;
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+section {
+  padding: 60px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+/* ===============================
+   SERVICES
+================================ */
+.services {
+  background: #fff;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.service-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* ===============================
+   PRODUCT GRID (FINAL)
+================================ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.price {
+  color: #0b5ed7;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.product-card .whatsapp-btn {
+  margin-top: auto;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* ===============================
+   BADGES (FINAL FIX)
+================================ */
+.product-card .badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  z-index: 5;
+}
+
+.badge.mpya {
+  background: #22c55e;
+}
+
+.badge.offer {
+  background: #ef4444;
+}
+
+.badge.maarufu {
+  background: #f59e0b;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.footer {
+  background: #0b5ed7;
+  color: #fff;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-bottom {
+  background: #084298;
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+}
+/* ===============================
+   BIDHAA ZETU – LAYOUT FIX
+================================ */
+
+.products {
+  background: #f9fafb;
+}
+
+.products .section-title {
+  margin-bottom: 30px;
+}
+
+/* wrapper ya juu */
+.products-top {
+  max-width: 1100px;
+  margin: 0 auto 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* search box */
+.search-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* filter buttons */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  font-size: 14px;
+}
+
+/* mobile polish */
+@media (max-width: 768px) {
+  .products-top {
+    gap: 14px;
+  }
+
+  .filter-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+/* ===============================
+   TESTIMONIALS – PROFESSIONAL FIX
+================================ */
+
+.testimonials {
+  background: #ffffff;
+}
+
+.testimonial-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #f8fafc;
+  padding: 28px 24px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.testimonial-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: #0b5ed7;
+}
+
+.testimonial-location {
+  font-size: 13px;
+  color: #555;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .testimonial-card {
+    text-align: center;
+  }
+}
+/* ===============================
+   BIDHAA ZETU – PROFESSIONAL UI
+================================ */
+
+.products {
+  background: linear-gradient(180deg, #f9fafb, #ffffff);
+  padding-top: 80px;
+}
+
+/* title */
+.products .section-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 0.3px;
+}
+
+/* wrapper */
+.products-top {
+  max-width: 1000px;
+  margin: 0 auto 45px;
+  padding: 30px 25px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+/* SEARCH */
+.search-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 520px;
+  padding: 16px 22px;
+  border-radius: 999px;
+  border: 2px solid #e5e7eb;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.search-box input::placeholder {
+  color: #9ca3af;
+}
+
+.search-box input:focus {
+  border-color: #0b5ed7;
+  box-shadow: 0 0 0 4px rgba(11,94,215,0.15);
+}
+
+/* FILTER BAR */
+.filter-bar {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid #0b5ed7;
+  background: #ffffff;
+  color: #0b5ed7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #0b5ed7;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #0b5ed7;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(11,94,215,0.35);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .products-top {
+    padding: 22px 18px;
+    gap: 18px;
+  }
+
+  .products .section-title {
+    font-size: 24px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+    padding: 14px 18px;
+  }
+
+  .filter-btn {
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+}
+/* ===============================
+   BIDHAA ZETU – SPACING FIX
+================================ */
+
+/* title ipumue juu na chini */
+.products .section-title {
+  margin-bottom: 50px !important;
+}
+
+/* wrapper ya search + filters */
+.products-top {
+  margin-top: 20px !important;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+/* search box ishuke kidogo */
+.products-top .search-box {
+  margin-bottom: 26px !important;
+}
+
+/* filter bar ishuke chini ya search */
+.products-top .filter-bar {
+  margin-top: 10px !important;
+}
+
+/* buttons zisiwe zinakaa juu sana */
+.filter-btn {
+  margin-top: 6px;
+}
+/* ===============================
+   BIDHAA ZETU – BOTTOM SPACING FIX
+================================ */
+
+/* filter bar ipumue chini */
+.products-top .filter-bar {
+  margin-bottom: 50px !important;
+}
+
+/* product grid ishuke kidogo */
+.products .product-grid {
+  margin-top: 30px !important;
+}
+/* ===============================
+   EMPTY STATE (PROFESSIONAL)
+================================ */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #555;
+}
+
+.empty-state h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #0b5ed7;
+}
+
+.empty-state p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===============================
+   PRODUCT ANIMATION
+================================ */
+.product-card {
+  animation: fadeUp 0.35s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===============================
+   NAVBAR FIX – FINAL
+================================ */
+
+.nav {
+  background: #0b5ed7;
+  color: #fff;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.nav-links li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* BUTTON */
+.nav-btn {
+  background: #25d366;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* ===== CONTACT PAGE ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.contact-info {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0b5ed7;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== ABOUT PAGE ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.about-card h3 {
+  margin-bottom: 10px;
+  color: #0b5ed7;
+}
+
+.about-card p {
+  font-size: 15px;
+  color: #444;
+}
+/* ===== CONTACT PAGE ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0b5ed7;
+}
+
+.contact-info {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+  color: #0b5ed7;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== MOBILE NAVBAR ===== */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: #0b5ed7;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav-links li {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 14px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+/* ===============================
+   FLOATING WHATSAPP BUTTON
+================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 58px;
+  height: 58px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* Mobile polish */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-float img {
+    width: 28px;
+    height: 28px;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;   /* logo size */
+  width: auto;
+}
+/* ===============================
+   CONTACT PAGE
+================================ */
+.contact-hero {
+  background: linear-gradient(135deg, #0b5ed7, #084298);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  opacity: 0.9;
+}
+
+.contact-section {
+  background: #f6f7f9;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-form,
+.contact-info {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-form h2,
+.contact-info h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0b5ed7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===============================
+   TOP BAR (SIMPLE & PREMIUM)
+================================ */
+.top-bar {
+  background: linear-gradient(90deg, #084298, #0b5ed7);
+  color: #fff;
+  font-size: 13px;
+}
+
+.top-bar-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 6px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar span {
+  opacity: 0.95;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .top-bar-inner {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+}
+.top-bar-left {
+  display: flex;
+  gap: 14px;
+}
+
+.top-bar-right {
+  display: flex;
+  gap: 14px;
+}
+
+.top-bar-right img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.top-bar-right img:hover {
+  transform: scale(1.2);
+}
+.nav-search input {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: none;
+  font-size: 13px;
+  outline: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 360px;
+}
+
+.logo span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nav-links {
+  gap: 22px; /* badala ya kubwa au ndogo sana */
+}
+
+.nav-search {
+  margin-left: 10px;
+}
+.nav-search input {
+  height: 36px;
+  min-width: 160px;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0 14px;
+  border: none;
+}
+.top-info-bar {
+  background: #0a3d91; /* deep blue */
+  color: #fff;
+  font-size: 13px;
+}
+
+.top-bar-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 6px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar-right img {
+  width: 15px;
+  height: 15px;
+  opacity: 0.9;
+}
+
+.top-bar-right img:hover {
+  opacity: 1;
+}
+/* ===============================
+   BIDHAA ZETU – SPACING FIX
+================================ */
+
+/* title ipumue juu na chini */
+.products .section-title {
+  margin-bottom: 50px !important;
+}
+
+/* wrapper ya search + filters */
+.products-top {
+  margin-top: 20px !important;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+/* search box ishuke kidogo */
+.products-top .search-box {
+  margin-bottom: 26px !important;
+}
+
+/* filter bar ishuke chini ya search */
+.products-top .filter-bar {
+  margin-top: 10px !important;
+}
+
+/* buttons zisiwe zinakaa juu sana */
+.filter-btn {
+  margin-top: 6px;
+}
+/* ===============================
+   BIDHAA ZETU – BOTTOM SPACING FIX
+================================ */
+
+/* filter bar ipumue chini */
+.products-top .filter-bar {
+  margin-bottom: 50px !important;
+}
+
+/* product grid ishuke kidogo */
+.products .product-grid {
+  margin-top: 30px !important;
+}
+/* ===============================
+   NAVBAR FIX – FINAL
+================================ */
+.nav {
+  background: #0b5ed7;
+  color: #fff;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+} 
+.product-detail {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.detail-card {
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.detail-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.product-detail {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.detail-card {
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.detail-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+.pagination button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+.pagination button.active {
+  background: #0b5ed7;
+  color: #fff;
+  border-color: #0b5ed7;
+}
+/* PRODUCT MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.hidden {
+  display: none !important;
+}
